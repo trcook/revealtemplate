@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- STYLESHEETS: -->
+
+<link rel="stylesheet" href="$reveal_path$/css/theme/my_solarized.css" type="text/css" id="theme">
+  <link rel="stylesheet" href="$reveal_path$/css/reveal.min.css"/>
+
+  <link rel="stylesheet" href="$reveal_path$/plugin/title-footer/title-footer.css" type="text/css">
+  <link rel="stylesheet" href="$reveal_path$/css/slides.css" type="text/css">
+  <link rel="stylesheet" href="$reveal_path$/plugin/toc-progress/toc-progress.css" type="text/css">
+  <link rel="stylesheet" href="$reveal_path$/css/slides.css" type="text/css">
+
+
+
+
+    <style type="text/css">code{white-space: pre;}</style>
+$if(highlighting-css)$
+    <style type="text/css">
+$highlighting-css$
+    </style>
+$endif$
+$if(css)$
+$for(css)$
+    <link rel="stylesheet" href="$css$"/>
+$endfor$
+$else$
+
+$endif$
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '$reveal_path$/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="$reveal_path$/lib/js/html5shiv.js"></script>
+    <![endif]-->
+$if(math)$
+    $math$
+$endif$
+$for(header-includes)$
+    $header-includes$
+$endfor$
+</head>
+<body>
+<!--
+EXAMPLE YAML:
+Remove / in front of each line (included here to prevent accidental parsing)
+/---
+/authors:
+/  - name: "tom"
+/authorlastnames: cook
+/date: "mar 9"
+/title: "a title"
+/---
+-->
+
+$for(include-before)$
+$include-before$
+$endfor$
+  <div class="reveal">
+    <div class="slides">
+
+$if(title)$
+<section>
+    <h2 class="no-toc-progress title tiny">$title$</h2>
+$if(subtitle)$
+  <h3 class="subtitle">$subtitle$</h3>
+$endif$
+$for(author)$
+    <h2 class="author">$author$</h2>
+$endfor$
+    <h3 class="date">$date$</h3>
+</section>
+$endif$
+$if(toc)$
+<section id="$idprefix$TOC">
+$toc$
+</section>
+$endif$
+
+$body$
+    </div>
+  </div>
+
+
+  <script src="$reveal_path$/lib/js/head.min.js"></script>
+  <script src="$reveal_path$/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: 1152,
+        height: 720,
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        viewDistance: 15,
+        slideNumber: true,
+        hideAddressBar: true,
+        theme: $if(theme)$'$theme$'$else$Reveal.getQueryHash().theme$endif$, // available themes are in /css/theme
+        transition: $if(transition)$'$transition$'$else$Reveal.getQueryHash().transition || 'default'$endif$, // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+      src: '$reveal_path$/lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: '$reveal_path$/plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: '$reveal_path$/plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: '$reveal_path$/plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: '$reveal_path$/plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: '$reveal_path$/plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: '$reveal_path$/plugin/title-footer/title-footer.js',
+      async: true,
+      callback: function() {
+        title_footer.initialize(
+          $if(title)$ '$if(authorlastnames)$ $for(authorlastnames)$
+                  $authorlastnames$$sep$ & 
+                $endfor$:'+Array( 1 + 1).join("\u2003")+
+                ' $endif$ $title$' ,$else$'put front-matter yaml in md file. see embedded comments of this file.',$endif$ 'rgba(255,255,255,0.7)');
+      }
+    }, {
+      src: '$reveal_path$/plugin/toc-progress/toc-progress.js',
+      async: true,
+      callback: function() {
+        toc_progress.initialize('scroll', "rgba(255,255,255,0.7)");
+        toc_progress.create();
+      }
+    }]
+  });
+    </script>
+  $for(include-after)$
+  $include-after$
+
+
+
+
+  $endfor$
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ "HTML-CSS": {scale:90},tex2jax: { inlineMath: [['$$','$$'],['\\(','\\)']],processEnvironments: true } });
+</script>
+
+<script src='reveal.js/lib/js/oriDomi/oridomi.min.js'>
+// var folded = new OriDomi(document.getElementsByClassName('.paper')[0]);
+</script>
+<script type='text/javascript'>
+  (function() {
+// folded.stairs(-99).ramp(-99);
+// folded.foldup(90);
+var fold2=new OriDomi('.bpaper2', {
+        vPanels: [48,5,2,5,40].map(function(n) {
+          return n * 1;
+        }).reverse(),
+speed:           1,
+maxAngle: 90,
+minAngle: 1,
+      });
+fold2.stairs(90,2);
+})();
+</script>
+
+  </body>
+
+
+</html>

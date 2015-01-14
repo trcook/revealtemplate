@@ -1,0 +1,212 @@
+@import url("reveal.css");
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../lib/font/quicksand-regular.eot');
+  src: url('../lib/font/quicksand-regular.eot?#iefix') format('embedded-opentype'), url('../lib/font/quicksand-regular.woff') format('woff'), url('../lib/font/quicksand-regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../lib/font/quicksand-bold.eot');
+  src: url('../lib/font/quicksand-bold.eot?#iefix') format('embedded-opentype'), url('../lib/font/quicksand-bold.woff') format('woff'), url('../lib/font/quicksand-bold.ttf') format('truetype');
+}
+.reveal {
+  font-family: "Quicksand";
+}
+#toc-progress-footer-main-inside ul {
+  width: 100%;
+  text-align: center;
+}
+#toc-progress-footer-main-inside ul li {
+  display: inline;
+  padding-left: 15px;
+  text-align: center;
+  font-size: 2vh;
+}
+#toc-progress-footer-secondary {
+  margin-left: 0px;
+}
+#toc-progress-footer-secondary-inside {
+  margin-left: 0px;
+}
+#toc-progress-footer-secondary-inside {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+#toc-progress-footer-secondary-inside ul {
+  margin-left: 0px;
+  width: 100%;
+  text-align: center;
+}
+#toc-progress-footer-secondary-inside ul ul li {
+  margin-right: 5px;
+}
+#toc-progress-footer-secondary-inside ul ul li a {
+  color: auto;
+}
+#toc-progress-footer-secondary-inside ul li {
+  padding-right: 15px;
+  text-align: center;
+}
+#toc-progress-footer-secondary-inside ul li a {
+  text-align: center;
+}
+.reveal embed {
+  max-height: 95%;
+  max-width: 95%;
+  overflow: visible;
+}
+.reveal h2 {
+  word-break: keep-all;
+  line-height: 1;
+  font-size: 5vh;
+}
+.reveal .slide-number {
+  opacity: 1;
+  transition: opacity 800ms ease-in-out;
+  position: fixed;
+  bottom: 3px;
+  height: 3vh;
+  z-index: 31;
+  width: 100%;
+  font-size: 3vh;
+  text-align: right;
+  letter-spacing: 0em;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+.titleslide h1 {
+  font-size: 6vh !important;
+}
+.reveal h1,
+.titleslide h1,
+.reveal h2,
+.reveal h3,
+.mysubtitle {
+  word-wrap: normal;
+  margin-bottom: 1vh;
+  font-size: 6vh;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  word-wrap: visible;
+  min-width: 100%;
+}
+.reveal section > h1 {
+  font-size: 5vh;
+}
+.reveal .mysubtitle {
+  font-size: 6vh !important;
+  box-shadow: none !important;
+  font-style: normal !important;
+  text-shadow: none !important;
+}
+.reveal h3 {
+  font-size: 5vh;
+  text-align: left;
+  margin-top: 3vh;
+  margin-bottom: 0vh;
+  margin-left: 0vw;
+  min-width: 80%;
+  color: #073642;
+}
+.reveal h3 + ul {
+  text-align: left;
+  list-style-position: inside;
+}
+.reveal ul {
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 1vw;
+  min-width: 80%;
+}
+#title-footer {
+  text-align: left;
+  padding-left: 1vw;
+}
+table.stargazer_table1 {
+  font-size: 3.75vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+table.stargazer_table1 th {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #000;
+}
+table.stargazer_table1 th#dv {
+  border-bottom-style: none;
+  text-align: center;
+}
+table.stargazer_table1 tr {
+  margin: 0;
+  padding: 0;
+}
+table.stargazer_table1 tr.hline td {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #000;
+}
+table.stargazer_table1 td {
+  font-size: 3.75vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  padding-right: 1em;
+}
+.reveal .callout_block {
+  margin-top: 3vh;
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dc322f;
+}
+.reveal .callout_block h3 {
+  background-color: #dc322f;
+  margin: 0;
+  padding-left: 1vw;
+}
+h3.date,
+h2.author_name {
+  text-align: center;
+  color: #586e75;
+  font-size: 4vh;
+}
+.alert-red {
+  color: #dc322f;
+}
+h2.author_name {
+  font-size: 5vh;
+  margin: 1vh;
+  padding: 0;
+}
+.reveal .alert-red {
+  color: #dc322f;
+}
+.reveal .highlight-current-red.visible,
+.reveal .highlight-red.visible {
+  font-weight: bold;
+  color: #dc322f !important;
+}
+.supertiny {
+  font-size: 1pt;
+  text-align: left;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+#title-footer {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-color-top: #2226c6;
+}
+.reveal section img.plainimg {
+  border: none;
+  box-shadow: none;
+}
+.math {
+  font-size: 1vh;
+}

@@ -1,0 +1,129 @@
+/*************************************************
+*                                                *
+* CSS for the TOC-Progress plugin for Reveal.js  *
+*                                                *
+* Author: Igor Leturia                           *
+*                                                *
+* License: GPL v3                                *
+* http://www.gnu.org/copyleft/gpl.html           *
+*                                                *
+*************************************************/
+/*source credit goes to e-gor/reveal.js-TOC-Progress*/
+/* Style for the TOC-Progress footer */
+
+#toc-progress-footer
+{
+	opacity: 1;
+	transition: opacity 800ms ease-in-out;
+	position: fixed;
+	top: 0px;
+	height: 5.5vh;
+	z-index: 20;
+	width: 100%;
+	font-size: 1.55vh;
+	text-align: left;
+	white-space: nowrap;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+}
+
+/* Bottom position for the TOC-Progress footer when progress bar is visible */
+
+div.progress[style="display: block;"] ~ #toc-progress-footer
+{
+	top: 3px;
+}
+
+/* Bottom position for the TOC-Progress footer when progress bar is not visible */
+
+#toc-progress-footer
+{
+	top: 0px;
+}
+
+/* Make TOC-Progress invisible if explicitly indicated */
+
+.no-toc-progress #toc-progress-footer
+{
+	opacity: 0;
+	transition: opacity 800ms ease-in-out;
+}
+
+/* Make TOC-Progress invisible in overview mode */
+
+.overview #toc-progress-footer
+{
+	opacity: 0;
+	transition: opacity 800ms ease-in-out;
+}
+
+/* Position and styles for the left part (main sections) of the TOC-Progress */
+
+#toc-progress-footer-main
+{
+	width: 100%;
+	height: 50%;
+	/*float: left;*/
+	overflow: hidden;
+	letter-spacing: 0em;
+}
+
+#toc-progress-footer-main-inside
+{
+	/*float: right;*/
+	margin-right: 2em;
+}
+
+/* Position and styles for the right part (subsections) of the TOC-Progress */
+
+#toc-progress-footer-secondary
+{
+	width: 100%;
+	height: 50%;
+	/*float: right;*/
+	overflow: hidden;
+	letter-spacing: 0em;
+}
+
+#toc-progress-footer-secondary-inside
+{
+	/*float: left;*/
+	margin-left: 0em;
+}
+#toc-progress-footer-main-inside ul {
+  width: 100%;
+  text-align: center;
+}
+#toc-progress-footer-main-inside ul li {
+  display: inline;
+  padding-left: 15px;
+  text-align: center;
+}
+#toc-progress-footer-secondary {
+  margin-left: 0px;
+}
+#toc-progress-footer-secondary-inside {
+  margin-left: 0px;
+}
+#toc-progress-footer-secondary-inside {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+#toc-progress-footer-secondary-inside ul {
+  margin-left: 0px;
+  width: 100%;
+  text-align: center;
+}
+#toc-progress-footer-secondary-inside ul ul li {
+  margin-right: 5px;
+}
+#toc-progress-footer-secondary-inside ul ul li a {
+  color: auto;
+}
+#toc-progress-footer-secondary-inside ul li {
+  padding-right: 15px;
+  text-align: center;
+}
+#toc-progress-footer-secondary-inside ul li a {
+  text-align: center;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- STYLESHEETS: -->
+
+<link rel="stylesheet" href="./reveal.js/css/theme/solarized.css" type="text/css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/css/reveal.min.css"/>
+
+  <link rel="stylesheet" href="./reveal.js/plugin/title-footer/title-footer.css" type="text/css">
+  <link rel="stylesheet" href="./reveal.js/css/slides.css" type="text/css">
+  <link rel="stylesheet" href="./reveal.js/plugin/toc-progress/toc-progress.css" type="text/css">
+  <link rel="stylesheet" href="./reveal.js/css/slides.css" type="text/css">
+
+
+
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="./reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<!--
+EXAMPLE YAML:
+Remove / in front of each line (included here to prevent accidental parsing)
+/---
+/authors:
+/  - name: "tom"
+/authorlastname: cook
+/date: "mar 9"
+/title: "a title"
+/---
+-->
+
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="introduction" class="slide level2">
+<h1>## Introduction</h1>
+</section>
+<section id="section" class="slide level2">
+<h1></h1>
+<ul>
+<li>How does reputation work?</li>
+<li>Why/when does reputation change?</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h1></h1>
+<h4 id="how-is-reputation-useful">How is Reputation Useful</h4>
+<ul>
+<li>From Perspective of Observers:
+<ul>
+<li>Aids decisions amidst uncertainty</li>
+<li>Useful when information is scarce</li>
+<li>Fills in for the unknown</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-2" class="slide level2">
+<h1></h1>
+<h4 id="puzzle">Puzzle</h4>
+<ul>
+<li>Assume that prior outcomes are perfectly observable?</li>
+<li>What happens when they are not?</li>
+<li>Example: A holder enters into an alliance, but no members ever encounter conflict.
+<ul>
+<li>What does this tell observers about the holder's type?</li>
+</ul></li>
+</ul>
+</section>
+<section id="theory" class="slide level2">
+<h1>Theory</h1>
+</section>
+<section id="section-3" class="slide level2">
+<h1></h1>
+<ul>
+<li>Threshold:</li>
+<li><span class="math">\(P^{*}=\frac{U\_{os}(Reject)-U\_{os}(Betrayl)}{U\_{os}(Accept|Reliable)-U\_{os}(Betrayl)}\)</span></li>
+<li>Conditions for Acceptance:</li>
+<li>Pr(Reliable)<span class="math">\(\geq P^{*}\)</span></li>
+</ul>
+</section>
+<section id="section-4" class="slide level2">
+<h1></h1>
+<h4 id="comparing-ambiguous-outcomes-against-traditional-model">Comparing ambiguous outcomes against Traditional Model</h4>
+<embed src="rGraph2.cdf" width="800px" height="550px">
+</section>
+<section id="section-5" class="slide level2">
+<h1></h1>
+<h4 id="hypotheses">Hypotheses:</h4>
+<ul>
+<li><!-- .element: class="fragment fade-in" data-fragment-index="1" -->
+<span class="fragment highlight-current-red" data-fragment-index="1"> H1: Holder reputations with observers decay faster among recently betrayed observers. </span></li>
+<li><!-- .element: class="fragment fade-in" data-fragment-index="2" -->
+<span class="fragment highlight-current-red" data-fragment-index="2"> H2: Holders that enter into agreements with ambiguous outcomes have better reputations than holders that did not enter into any such agreements </span></li>
+<li><!-- .element: class="fragment fade-in" data-fragment-index="3" -->
+<span class="fragment highlight-current-red" data-fragment-index="3"> H3: Among holders that recently entered into agreements with ambiguous outcomes, holder reputations with recently betrayed observers will decay faster than holder reputations with observers that have not recently been betrayed. </span></li>
+</ul>
+<h3 id="empirics">Empirics</h3>
+</section>
+<section id="section-6" class="slide level2">
+<h1></h1>
+<h4 id="model-specification">Model Specification</h4>
+</section>
+<section id="section-7" class="slide level2">
+<h1></h1>
+<h4 id="tables">Tables</h4>
+</section>
+<section id="section-8" class="slide level2">
+<h1></h1>
+<h4 id="comparing-ambiguous-outcomes-betrayed-v.-non-betrayed-1945-2008">Comparing ambiguous outcomes (betrayed v. non-betrayed), 1945-2008</h4>
+<figure>
+<img src="eugene_betrayed_compare.png" />
+</figure>
+</section>
+    </div>
+  </div>
+
+
+  <script src="./reveal.js/lib/js/head.min.js"></script>
+  <script src="./reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        hideAddressBar: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+      src: './reveal.js/lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: './reveal.js/plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: './reveal.js/plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: './reveal.js/plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: './reveal.js/plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: './reveal.js/plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: './reveal.js/plugin/title-footer/title-footer.js',
+      async: true,
+      callback: function() {
+        title_footer.initialize(
+'put front-matter yaml in md file. see embedded comments of this file.', 'rgba(255,255,255,0.7)');
+      }
+    }, {
+      src: './reveal.js/plugin/toc-progress/toc-progress.js',
+      async: true,
+      callback: function() {
+        toc_progress.initialize('scroll', "rgba(255,255,255,0.7)");
+        toc_progress.create();
+      }
+    }]
+  });
+    </script>
+  
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] } });
+</script>
+<script type='text/javascript' src='http://beta.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+
+
+  </body>
+
+
+</html>
