@@ -8,5 +8,5 @@ relative_reveal_location: "./reveal.js/"
 # PICKUPHERE: add flag to set for converting an rmd or just straight md to reveal. 
 
 # give one of two formats here, md or rmd.this effects how rake will run
-markdown_format: "md"
+markdown_format: "html"
 excludes: ['.*readme.*','.*pandoc.*','.*README.*']
